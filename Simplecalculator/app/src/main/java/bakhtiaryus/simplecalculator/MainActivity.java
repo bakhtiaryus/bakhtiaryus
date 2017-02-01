@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void calculator(View view) {
+    public void calculate(View view) {
         EditText num1 = (EditText) findViewById(R.id.num1);
         EditText num2 = (EditText) findViewById(R.id.num2);
         TextView result = (TextView) findViewById(R.id.result);
