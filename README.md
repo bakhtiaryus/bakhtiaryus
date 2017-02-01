@@ -1,1 +1,2 @@
 "#bakhtiaryus" 
+"# pelatihan_droid" 
