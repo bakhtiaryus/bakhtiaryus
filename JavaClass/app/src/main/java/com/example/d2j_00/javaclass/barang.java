@@ -17,7 +17,7 @@ public class barang {
     }
 
     public String toString(){
-        return nama+" |"+this.getStringCategory()+" |"+this.harga;
+        return nama+" |"+this.getStringCategory()+" |"+this.harga +"\n";
     }
 
     public void setNama(String nama){
