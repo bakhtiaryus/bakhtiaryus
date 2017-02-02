@@ -8,7 +8,7 @@ import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
-import com.example.d2j_00.simplecalculator.R;
+import bakhtiaryus.simplecalculator.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void calculator(View view) {
+    public void calculate (View view) {
         EditText num1 = (EditText) findViewById(R.id.num1);
         EditText num2 = (EditText) findViewById(R.id.num2);
         TextView result = (TextView) findViewById(R.id.result);
@@ -38,11 +38,11 @@ public class MainActivity extends AppCompatActivity {
             hasil = angka1 * angka2;
         } else if (opr == R.id.bagi) {
             hasil = angka1 / angka2;
+        }
+            //lengkapi perkalian dan pembagian
+            //menambahkan elemen di layout dan main activity
+            //logika kalkulasinya
 
-        //lengkapi perkalian dan pembagian
-        //menambahkan elemen di layout dan main activity
-        //logika kalkulasinya
+            result.setText(Double.toString(hasil));
 
-        result.setText(Double.toString(hasil));
-    }
-}}
+    }}
