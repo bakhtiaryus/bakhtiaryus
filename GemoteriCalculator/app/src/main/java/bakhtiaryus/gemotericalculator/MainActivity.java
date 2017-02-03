@@ -63,6 +63,7 @@ public class MainActivity extends AppCompatActivity  implements  AdapterView.OnI
 
             text2.setText("Lebar");
             input2.setEnabled(true);
+            input3.setEnabled(true);
             text3.setText("Tinggi");
         } else
         {
@@ -90,12 +91,12 @@ public class MainActivity extends AppCompatActivity  implements  AdapterView.OnI
         String operator = spinner.getSelectedItem().toString();
         String hasil = "";
          inp1 = Double.parseDouble(input1.getText().toString());
+        inp3 = Double.parseDouble(input3.getText().toString());
 
         if(input2.isEnabled())
         {
             inp2 = Double.parseDouble(input2.getText().toString());
         }
-        inp3 = Double.parseDouble(input3.getText().toString());
 
 
         if(operator.equalsIgnoreCase("Lingkaran")){
