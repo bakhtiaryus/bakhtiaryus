@@ -40,8 +40,6 @@ public class MainActivity extends AppCompatActivity  implements  AdapterView.OnI
         if (operator.equalsIgnoreCase("Lingkaran")) {
             text1.setText("Jari-Jari");
             input2.setEnabled(false);
-            input2.setEnabled(false);
-
             input3.setEnabled(false);
 
             text2.setText("");
@@ -82,6 +80,7 @@ public class MainActivity extends AppCompatActivity  implements  AdapterView.OnI
 
     }
     public void calculate(View view){
+
         EditText input1 = (EditText) findViewById(R.id.input1);
         EditText input2 = (EditText) findViewById(R.id.input2);
         EditText input3 = (EditText) findViewById(R.id.input3);
@@ -91,13 +90,15 @@ public class MainActivity extends AppCompatActivity  implements  AdapterView.OnI
         String operator = spinner.getSelectedItem().toString();
         String hasil = "";
          inp1 = Double.parseDouble(input1.getText().toString());
-        inp3 = Double.parseDouble(input3.getText().toString());
 
         if(input2.isEnabled())
         {
             inp2 = Double.parseDouble(input2.getText().toString());
         }
-
+        if(input3.isEnabled())
+        {
+            inp3 = Double.parseDouble(input3.getText().toString());
+        }
 
         if(operator.equalsIgnoreCase("Lingkaran")){
             hasil = "luas dari Lingkaran adalah : "+(Math.PI*inp1*inp1)+"\n";
