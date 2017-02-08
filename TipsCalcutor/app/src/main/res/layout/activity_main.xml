@@ -76,8 +76,8 @@
         android:layout_height="wrap_content"
         android:inputType="numberDecimal"
         android:layout_centerVertical="true"
-        android:layout_alignLeft="@+id/input2"
-        android:layout_alignStart="@+id/input2" />
+        android:layout_toLeftOf="@+id/textView"
+        android:layout_toStartOf="@+id/textView" />
     <Button
         android:id="@+id/btn_calc"
         android:layout_width="match_parent"
