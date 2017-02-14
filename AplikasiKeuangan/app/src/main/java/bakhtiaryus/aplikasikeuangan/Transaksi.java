@@ -2,10 +2,12 @@ package bakhtiaryus.aplikasikeuangan;
 
 import android.provider.BaseColumns;
 
+import java.io.Serializable;
+
 /**
  * Created by D2J-00 on 13/02/2017.
  */
-public class Transaksi implements BaseColumns {
+public class Transaksi implements BaseColumns, Serializable {
     public String nama; //nama transaksi
     public int jenis; // 1=pemasukan 2=pengeluaran
     public int jumlah;
@@ -45,7 +47,7 @@ public class Transaksi implements BaseColumns {
 
     public static final String SQL_CREATE = "create table "+TABLE_NAME
             +"("+_ID+" integer primary_key,"
-            +" "+COL_NAMA+" Text, "
+            +" "+COL_NAMA+" text, "
             +" "+COL_JENIS+" integer, "
             +" "+COL_JUMLAH+" integer, "
             +" "+COL_KETERANGAN+" text )";

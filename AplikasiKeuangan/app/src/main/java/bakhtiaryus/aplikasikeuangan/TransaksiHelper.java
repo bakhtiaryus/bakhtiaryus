@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 import java.sql.SQLClientInfoException;
 import java.util.ArrayList;
@@ -40,9 +41,10 @@ public class TransaksiHelper  extends SQLiteOpenHelper{
         values.put(Transaksi.COL_NAMA, nama);
         values.put(Transaksi.COL_JENIS, jenis);
         values.put(Transaksi.COL_JUMLAH, jumlah);
-        if(keterangan==null);
+        if(keterangan==null)
             keterangan="";
         values.put(Transaksi.COL_KETERANGAN, keterangan);
+        Log.d("detail.transaksi", nama+"|"+keterangan);
         db.insert(Transaksi.TABLE_NAME,null,values );
 
     }
@@ -62,10 +64,11 @@ public class TransaksiHelper  extends SQLiteOpenHelper{
                     cursor.getInt(cursor.getColumnIndex(Transaksi.COL_JENIS)),
                     cursor.getInt(cursor.getColumnIndex(Transaksi.COL_JUMLAH)),
                     cursor.getString(cursor.getColumnIndex(Transaksi.COL_KETERANGAN))
-        );
+                );
+
             transaksi.add(newTrans);
         }
-        cursor.close();;
+        cursor.close();
         return transaksi;
     }
 

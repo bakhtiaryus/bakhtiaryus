@@ -41,10 +41,9 @@ public class Layout extends AppCompatActivity {
         String keterangan=edtKeterangan.getText().toString();
 
         dbHelper.insertTransaksi(nama,jenis,jumlah,keterangan);
-        Log.d("tambah.transaksi", nama+" - "+Integer.toString(jenis)+" - "+Integer.toString(jumlah)
-                +" - "+keterangan);
+        Log.d("tambah.transaksi", nama+" - "+Integer.toString(jenis)+" - "+Integer.toString(jumlah)+" - "+keterangan);
         Toast.makeText(this, "Transaksi "+nama+" berhasil disimpan",Toast.LENGTH_SHORT).show();
 
-        startActivity(new Intent(this, MainActivity.class));
+       finish();
     }
 }
